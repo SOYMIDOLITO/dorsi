@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>THE CLOTHES CLUB - tu armario, tu estilo, tu mundo</title>
 
 <style>
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background:
-        radial-gradient(circle at 20% 20%, #9b42d8 0%, transparent 20%),
-        radial-gradient(circle at 80% 30%, #6c22a8 0%, transparent 25%),
-        linear-gradient(135deg, #260047, #6b1795, #32005c);
+
+    background-color: #411E57;
+
+    background-image:
+        linear-gradient(
+            rgba(65, 30, 87, 0.70),
+            rgba(135, 45, 114, 0.70)
+        ),
+        url("tela.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     color: white;
+
     font-family: "Trebuchet MS", Arial, sans-serif;
 }
+
 
 /* =========================
    CONTENEDOR PRINCIPAL
@@ -27,14 +49,17 @@ body {
 .page {
     width: 1100px;
     max-width: 96%;
+
     margin: 20px auto;
-    border: 3px solid #dca4ff;
+
+    border: 3px solid #EDABBE;
+
+    background-color: rgba(65, 30, 87, 0.90);
+
     box-shadow:
-        0 0 10px #fff,
-        0 0 30px #b83cff,
-        inset 0 0 20px #21002f;
-    background: rgba(45, 0, 75, 0.92);
+        0 0 20px rgba(65, 30, 87, 0.50);
 }
+
 
 /* =========================
    ENCABEZADO
@@ -42,30 +67,29 @@ body {
 
 header {
     min-height: 180px;
+
     position: relative;
+
     text-align: center;
+
     padding: 30px 20px 20px;
+
     overflow: hidden;
 
-    background:
-        linear-gradient(rgba(89, 0, 130, .7), rgba(40, 0, 80, .8)),
-        repeating-linear-gradient(
-            90deg,
-            rgba(255,255,255,.04) 0px,
-            rgba(255,255,255,.04) 2px,
-            transparent 2px,
-            transparent 45px
-        );
-    border-bottom: 2px solid #e7b1ff;
+    background-color: rgba(135, 45, 114, 0.75);
+
+    border-bottom: 2px solid #EDABBE;
 }
 
 header:before,
 header:after {
     content: "✦";
+
     position: absolute;
-    color: #fff;
+
+    color: #EDABBE;
+
     font-size: 45px;
-    text-shadow: 0 0 12px white, 0 0 25px #ff55ff;
 }
 
 header:before {
@@ -78,25 +102,36 @@ header:after {
     top: 80px;
 }
 
+
 .logo {
     font-size: 55px;
+
     font-weight: bold;
+
     letter-spacing: 3px;
 
-    color: #f4d5ff;
+    color: #EDABBE;
+
     text-shadow:
-        3px 3px 0 #7c1bb5,
-        5px 5px 0 #28003d,
-        0 0 8px white,
-        0 0 20px #ff66ff;
+        2px 2px 0 #411E57;
 }
+
 
 .subtitle {
     font-size: 20px;
+
     font-style: italic;
-    color: #ffd7ff;
-    text-shadow: 0 0 8px #ff5cff;
+
+    color: #EDABBE;
 }
+
+
+.sparkle {
+    color: #EDABBE;
+
+    margin-top: 10px;
+}
+
 
 /* =========================
    CUERPO
@@ -104,80 +139,92 @@ header:after {
 
 .content {
     display: grid;
-    grid-template-columns: 210px 1fr 220px;
+
+    grid-template-columns:
+        210px
+        minmax(0, 1fr)
+        220px;
+
     gap: 12px;
+
     padding: 15px;
 }
+
 
 /* =========================
    PANELES
 ========================= */
 
 .panel {
-    border: 2px solid #e4aaff;
-    border-radius: 15px;
+    border: 2px solid #EDABBE;
 
-    background:
-        linear-gradient(
-            rgba(130, 38, 180, .8),
-            rgba(49, 4, 83, .9)
-        );
-
-    box-shadow:
-        0 0 8px #c75aff,
-        inset 0 0 15px rgba(255,255,255,.08);
+    background-color:
+        rgba(124, 78, 187, 0.75);
 
     padding: 12px;
 }
 
+
 .panel-title {
     text-align: center;
+
     font-weight: bold;
+
     font-size: 18px;
-    color: #ffe3ff;
+
+    color: #EDABBE;
+
     margin-bottom: 10px;
-    text-shadow: 0 0 8px #fff;
 }
 
+
 /* =========================
-   MENU
+   MENÚ
 ========================= */
 
 .menu {
     display: flex;
+
     flex-direction: column;
+
     gap: 7px;
+
+    background-color:
+        rgba(65, 30, 87, 0.85);
+
+    padding: 15px;
 }
+
 
 .menu-button {
     display: block;
+
     padding: 10px;
 
     text-decoration: none;
+
     color: white;
+
     font-weight: bold;
+
     font-size: 16px;
 
-    border: 1px solid #f0b9ff;
-    border-radius: 12px;
+    border: 1px solid #EDABBE;
 
-    background:
-        linear-gradient(
-            #a94ee4,
-            #541087
-        );
+    background-color: #872D72;
 
-    box-shadow:
-        inset 0 1px 5px rgba(255,255,255,.4),
-        0 0 5px #b83cff;
-
-    text-shadow: 1px 1px 2px #26002e;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
+
 
 .menu-button:hover {
-    background: linear-gradient(#dc78ff, #7419aa);
-    transform: scale(1.02);
+    background-color: #DE5C8F;
+
+    transform: translateX(3px);
 }
+
 
 /* =========================
    BIENVENIDA
@@ -185,115 +232,148 @@ header:after {
 
 .welcome {
     min-height: 270px;
+
     padding: 25px;
 
-    border: 2px solid #d993ff;
-    border-radius: 18px;
+    border: 2px solid #EDABBE;
 
-    background:
-        radial-gradient(circle at 30% 30%, #a044d0, transparent 30%),
-        linear-gradient(135deg, #7316a0, #310052);
-
-    box-shadow:
-        0 0 15px #a737db,
-        inset 0 0 25px rgba(255,255,255,.08);
+    background-color:
+        rgba(135, 45, 114, 0.80);
 }
+
 
 .welcome h1 {
     text-align: center;
+
     font-size: 29px;
+
     margin-top: 0;
-    color: #ffe5ff;
-    text-shadow: 0 0 10px #ff72ff;
+
+    color: #EDABBE;
 }
+
 
 .welcome p {
     font-size: 17px;
+
     line-height: 1.7;
+
     text-align: center;
 }
 
+
 .slogan {
     text-align: center;
+
     font-size: 21px;
+
     font-weight: bold;
-    color: #ff8cff;
-    text-shadow: 0 0 10px #ff4cff;
+
+    color: #EDABBE;
 }
+
+
+/* =========================
+   TÍTULO DE CARACTERÍSTICAS
+========================= */
+
+.features-title {
+    text-align: center;
+
+    margin: 15px 0 10px;
+
+    border: 2px solid #EDABBE;
+
+    padding: 8px;
+
+    background-color:
+        rgba(135, 45, 114, 0.85);
+
+    font-size: 19px;
+
+    color: #EDABBE;
+}
+
 
 /* =========================
    TARJETAS
 ========================= */
 
-.features-title {
-    text-align: center;
-    margin: 15px 0 10px;
-
-    border: 2px solid #d891ff;
-    border-radius: 12px;
-
-    padding: 8px;
-
-    background: linear-gradient(#7620a4, #3b075d);
-
-    font-size: 19px;
-}
-
 .features {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
     gap: 7px;
 }
+
 
 .feature {
     min-height: 230px;
 
     padding: 12px;
 
-    border: 2px solid #d998ff;
-    border-radius: 12px;
+    border: 2px solid #EDABBE;
 
-    background:
-        linear-gradient(
-            rgba(113, 32, 158, .9),
-            rgba(48, 5, 79, .95)
-        );
+    background-color:
+        rgba(124, 78, 187, 0.75);
 
     text-align: center;
 
-    box-shadow:
-        inset 0 0 10px rgba(255,255,255,.1);
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
+
+
+.feature:hover {
+    transform: translateY(-3px);
+
+    background-color:
+        rgba(135, 45, 114, 0.85);
+}
+
 
 .feature h3 {
     margin: 5px 0 15px;
+
     font-size: 17px;
+
+    color: #EDABBE;
 }
+
 
 .icon {
     font-size: 45px;
+
     margin: 10px;
-    filter: drop-shadow(0 0 8px #ff8cff);
 }
+
 
 .feature p {
     font-size: 13px;
+
     line-height: 1.4;
 }
 
+
 .more {
     display: inline-block;
+
     padding: 5px 18px;
+
     margin-top: 5px;
 
-    border: 1px solid #f3c1ff;
-    border-radius: 8px;
+    border: 1px solid #EDABBE;
 
-    background: linear-gradient(#ad4ee8, #571080);
+    background-color: #DE5C8F;
 
     color: white;
+
     font-weight: bold;
 }
+
 
 /* =========================
    LOGIN
@@ -301,36 +381,67 @@ header:after {
 
 input {
     width: 100%;
+
     margin: 5px 0 10px;
+
     padding: 8px;
 
-    border: 2px solid #c878ed;
-    background: #f4e7ff;
-    color: #3d0757;
+    border: 2px solid #DE5C8F;
+
+    background-color: #EDABBE;
+
+    color: #411E57;
+
+    font-weight: bold;
 }
+
+
+input:focus {
+    outline: 2px solid #EDABBE;
+}
+
 
 .login-button {
     width: 100%;
+
     padding: 8px;
 
-    border: 2px solid #e8b5ff;
-    border-radius: 10px;
+    border: 2px solid #EDABBE;
 
-    background: linear-gradient(#bd5ce8, #5a1185);
+    background-color: #DE5C8F;
+
     color: white;
+
     font-weight: bold;
+
     font-size: 15px;
+
+    cursor: pointer;
 }
+
+
+.login-button:hover {
+    background-color: #872D72;
+}
+
+
+/* =========================
+   ENLACES DE LOGIN
+========================= */
 
 .login-links {
     text-align: center;
+
     margin-top: 10px;
+
     font-size: 12px;
 }
 
+
 .login-links a {
-    color: #ffb8ff;
+    color: #EDABBE;
 }
+
 
 /* =========================
    NOTICIAS
@@ -340,14 +451,18 @@ input {
     margin-top: 12px;
 }
 
+
 .news p {
     font-size: 13px;
+
     line-height: 1.5;
 }
 
+
 .news span {
-    color: #ff8cff;
+    color: #DE5C8F;
 }
+
 
 /* =========================
    FRASE
@@ -355,11 +470,16 @@ input {
 
 .quote {
     margin-top: 12px;
+
     text-align: center;
+
     font-style: italic;
+
     line-height: 1.6;
-    color: #ffd9ff;
+
+    color: #EDABBE;
 }
+
 
 /* =========================
    FOOTER
@@ -367,72 +487,112 @@ input {
 
 footer {
     text-align: center;
+
     padding: 18px;
 
-    border-top: 2px solid #e2a5ff;
+    border-top: 2px solid #EDABBE;
 
-    background:
-        linear-gradient(#651394, #29003f);
+    background-color:
+        rgba(135, 45, 114, 0.85);
 
-    color: #f4c9ff;
+    color: #EDABBE;
 }
 
+
 footer a {
-    color: #ffd2ff;
+    color: #EDABBE;
+
     text-decoration: none;
+
     margin: 0 8px;
 }
 
+
+footer a:hover {
+    color: white;
+}
+
+
 .copyright {
     margin-top: 12px;
+
     font-size: 12px;
 }
 
-/* =========================
-   BRILLOS
-========================= */
-
-.sparkle {
-    color: white;
-    text-shadow:
-        0 0 5px white,
-        0 0 10px #ff55ff,
-        0 0 20px #ff55ff;
-}
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media(max-width: 900px) {
+@media (max-width: 1000px) {
+
+    .features {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
 
     .content {
         grid-template-columns: 1fr;
     }
 
     .features {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .logo {
         font-size: 38px;
     }
+
 }
 
-@media(max-width: 500px) {
+
+@media (max-width: 500px) {
+
+    .page {
+        max-width: 100%;
+
+        margin: 0;
+    }
+
+    .content {
+        padding: 10px;
+    }
 
     .features {
         grid-template-columns: 1fr;
     }
+
+    .logo {
+        font-size: 30px;
+
+        letter-spacing: 1px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
 <div class="page">
 
-    <!-- ENCABEZADO -->
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
 
     <header>
 
@@ -444,16 +604,23 @@ footer a {
             ♥ tu armario, tu estilo, tu mundo ♥
         </div>
 
-        <div class="sparkle">✦　✧　★　✦　✧</div>
+        <div class="sparkle">
+            ✦　✧　★　✦　✧
+        </div>
 
     </header>
 
 
-    <!-- CONTENIDO -->
+    <!-- =========================
+         CONTENIDO
+    ========================== -->
 
     <div class="content">
 
-        <!-- MENÚ -->
+
+        <!-- =====================
+             MENÚ
+        ====================== -->
 
         <aside>
 
@@ -465,19 +632,33 @@ footer a {
 
                 <div class="menu">
 
-                    <a href="#" class="menu-button">⌂　inicio</a>
+                    <a href="#" class="menu-button">
+                        ⌂　inicio
+                    </a>
 
-                    <a href="#" class="menu-button">♕　mi armario</a>
+                    <a href="#" class="menu-button">
+                        ♕　mi armario
+                    </a>
 
-                    <a href="#" class="menu-button">♧　outfits</a>
+                    <a href="#" class="menu-button">
+                        ♧　outfits
+                    </a>
 
-                    <a href="#" class="menu-button">◉　colores</a>
+                    <a href="#" class="menu-button">
+                        ◉　colores
+                    </a>
 
-                    <a href="#" class="menu-button">♟　comunidad</a>
+                    <a href="#" class="menu-button">
+                        ♟　comunidad
+                    </a>
 
-                    <a href="#" class="menu-button">★　mi perfil</a>
+                    <a href="#" class="menu-button">
+                        ★　mi perfil
+                    </a>
 
-                    <a href="#" class="menu-button">?　ayuda</a>
+                    <a href="#" class="menu-button">
+                        ?　ayuda
+                    </a>
 
                 </div>
 
@@ -495,14 +676,18 @@ footer a {
                     el estilo queda."
                 </p>
 
-                <div class="sparkle">♥ ✦ ♥</div>
+                <div class="sparkle">
+                    ♥ ✦ ♥
+                </div>
 
             </div>
 
         </aside>
 
 
-        <!-- CENTRO -->
+        <!-- =====================
+             CENTRO
+        ====================== -->
 
         <main>
 
@@ -532,11 +717,16 @@ footer a {
 
             <section class="features">
 
+
                 <div class="feature">
 
-                    <h3>mi armario</h3>
+                    <h3>
+                        mi armario
+                    </h3>
 
-                    <div class="icon">👕</div>
+                    <div class="icon">
+                        👕
+                    </div>
 
                     <p>
                         Guardá todas tus prendas
@@ -544,16 +734,22 @@ footer a {
                         te guste.
                     </p>
 
-                    <span class="more">»»</span>
+                    <span class="more">
+                        »»
+                    </span>
 
                 </div>
 
 
                 <div class="feature">
 
-                    <h3>outfits</h3>
+                    <h3>
+                        outfits
+                    </h3>
 
-                    <div class="icon">👗</div>
+                    <div class="icon">
+                        👗
+                    </div>
 
                     <p>
                         Obtené ideas de outfits
@@ -561,16 +757,22 @@ footer a {
                         en tu armario.
                     </p>
 
-                    <span class="more">»»</span>
+                    <span class="more">
+                        »»
+                    </span>
 
                 </div>
 
 
                 <div class="feature">
 
-                    <h3>colores</h3>
+                    <h3>
+                        colores
+                    </h3>
 
-                    <div class="icon">🎨</div>
+                    <div class="icon">
+                        🎨
+                    </div>
 
                     <p>
                         Descubrí gamas de colores
@@ -578,16 +780,22 @@ footer a {
                         y tu estilo.
                     </p>
 
-                    <span class="more">»»</span>
+                    <span class="more">
+                        »»
+                    </span>
 
                 </div>
 
 
                 <div class="feature">
 
-                    <h3>comunidad</h3>
+                    <h3>
+                        comunidad
+                    </h3>
 
-                    <div class="icon">💬</div>
+                    <div class="icon">
+                        💬
+                    </div>
 
                     <p>
                         Chateá, compartí tus looks
@@ -595,16 +803,22 @@ footer a {
                         mismos gustos.
                     </p>
 
-                    <span class="more">»»</span>
+                    <span class="more">
+                        »»
+                    </span>
 
                 </div>
 
 
                 <div class="feature">
 
-                    <h3>perfil</h3>
+                    <h3>
+                        perfil
+                    </h3>
 
-                    <div class="icon">⭐</div>
+                    <div class="icon">
+                        ⭐
+                    </div>
 
                     <p>
                         Personalizá tu perfil
@@ -612,18 +826,24 @@ footer a {
                         tu estilo único.
                     </p>
 
-                    <span class="more">»»</span>
+                    <span class="more">
+                        »»
+                    </span>
 
                 </div>
+
 
             </section>
 
         </main>
 
 
-        <!-- COLUMNA DERECHA -->
+        <!-- =====================
+             COLUMNA DERECHA
+        ====================== -->
 
         <aside>
+
 
             <div class="panel">
 
@@ -631,17 +851,30 @@ footer a {
                     ♥ INICIAR SESIÓN ♥
                 </div>
 
-                <label>usuario:</label>
+                <label>
+                    usuario:
+                </label>
 
-                <input type="text">
+                <input
+                    type="text"
+                    name="usuario"
+                >
 
-                <label>contraseña:</label>
 
-                <input type="password">
+                <label>
+                    contraseña:
+                </label>
+
+                <input
+                    type="password"
+                    name="contraseña"
+                >
+
 
                 <button class="login-button">
                     entrar
                 </button>
+
 
                 <div class="login-links">
 
@@ -666,21 +899,25 @@ footer a {
                     ★ NOVEDADES ★
                 </div>
 
+
                 <p>
                     <span>★</span>
                     nuevo en THE CLOTHES CLUB:
                     ahora podés guardar tus outfits favoritos.
                 </p>
 
+
                 <p>
                     <span>★</span>
                     sumate a los grupos de la comunidad.
                 </p>
 
+
                 <p>
                     <span>★</span>
                     pronto: más opciones para personalizar tu perfil.
                 </p>
+
 
                 <p>
                     <span>»</span>
@@ -689,36 +926,51 @@ footer a {
 
             </div>
 
+
         </aside>
 
     </div>
 
 
-    <!-- PIE -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
 
         <div>
+
             <a href="#">inicio</a> |
+
             <a href="#">mi armario</a> |
+
             <a href="#">outfits</a> |
+
             <a href="#">colores</a> |
+
             <a href="#">comunidad</a> |
+
             <a href="#">mi perfil</a> |
+
             <a href="#">ayuda</a> |
+
             <a href="#">contacto</a>
+
         </div>
 
+
         <div class="copyright">
-            © 2000-2005 THE CLOTHES CLUB - todos los derechos reservados
+
+            © 2000-2005 THE CLOTHES CLUB
+            - todos los derechos reservados
+
         </div>
 
     </footer>
 
+
 </div>
 
 </body>
-</html>
 
-</body>
 </html>
